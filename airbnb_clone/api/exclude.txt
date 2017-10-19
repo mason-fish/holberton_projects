@@ -1,0 +1,4 @@
+fabfile.py
+fabfile.pyc
+*.tar.gz
+exclude.txt

@@ -1,0 +1,15 @@
+{
+  "last_page": false,
+  "statuses": [
+    {
+      "name" : "David Eicher",
+      "image_path" : "images/photo1.jpg",
+      "status" : "Just adding more text so that the text smoothly aligns itself when the image height is exceeded by the text. I hope this much text is sufficient to do that. What if you make the text look more longer. Even longer than this, lorem ipsum dadium, noficaloy Ya it works! So it seems the text is still not under the image so i'll just add more text to it, i hope it works this time!",
+    },
+    {
+      "name" : "Clara Oswald",
+      "image_path" : "/img/clara.jpg",
+      "status" : "I suddenly feel like running and being clever.",
+    }
+  ]
+}

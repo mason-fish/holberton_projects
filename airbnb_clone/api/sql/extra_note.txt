@@ -1,0 +1,8 @@
+To setup the database, a few additional steps were necessary:
+   1. Port 3306 needed to be opened on the server's iptables (firewall)
+
+   2. Additionally, within the mysql config file (/etc/mysql/my.cnf),
+      the 'bind-address' needed to be changed from localhost (127.0.0.1)
+      to the public facing ip of the server. This is important so that
+      remote access can be made available after creating users and granting
+      the appropriate permissions.

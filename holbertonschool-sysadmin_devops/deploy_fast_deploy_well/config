@@ -1,0 +1,6 @@
+ServerAliveInterval 30
+
+Host myHost
+     HostName ip or domain (if DNS setup)
+     User fakeUser
+     IdentityFile path/to/file/with/private/key

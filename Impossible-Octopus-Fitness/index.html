@@ -1,0 +1,479 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Share Site!</title>
+  <!--Some Meta tags for SEO-->
+  <meta name="keywords" content="clone, twitter" />
+  <meta name="description" content="This is the main page for my twitter clone" />
+  <meta name="author" content="Bilal and Mason" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- All css files to be merged together for publishing in future to minimize http requests -->
+  <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+  <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+  <link rel="stylesheet" type="text/css" href="styles/header.css" />
+  <link rel="stylesheet" type="text/css" href="styles/article.css" />
+  <link rel="stylesheet" type="text/css" href="styles/aside.css" />
+  <link rel="stylesheet" type="text/css" href="styles/footer.css" />
+  <link rel="stylesheet" type="text/css" href="styles/buttons.css" />
+  <link rel="stylesheet" type="text/css" href="styles/seo.css" />
+  <link rel="stylesheet" type="text/css" href="styles/mediaQueries.css" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  <script type="text/javascript" src="js/behavior.js"></script>
+  <script type="text/javascript" src="js/post_a_status.js"></script>
+  <script type="text/javascript" src="js/reply.js"></script>
+  <script type="text/javascript" src="js/toggle.js"></script>
+  <script type="text/javascript" src="js/load_more.js"></script>
+  <script type="text/javascript" src="js/ajax.js"></script>
+  <script type="text/javascript" src="js/sticky_smart_header.js"></script>
+  <script type="text/javascript" src="js/geolocation.js"></script>
+  <script type="text/javascript" src="js/weather.js"></script>
+  <script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
+  <script type="text/javascript" src="js/template.js"></script>
+
+
+
+
+
+</head>
+    <div id="tweetBox">
+      <a id="closeButton"><span></span></a>
+      <form  method="post">
+        <textarea class="tweetBody" placeholder="What's on your mind?"></textarea>
+        <div class="flex">
+          <label class="location"><input type="checkbox" name="location" value="" title="Include Location?"><span>Include Location</span></label>
+          <button id="sendButton" class="sendButton" type="button">Post</button>
+        </div>
+      </form>
+    </div>
+  </div>
+    <header>
+      <div class="paddingHeader">
+        <!--paddingHeader for defining header padding-->
+        <div class="logoAndTagline">
+          <button aria-label="navigationbutton" id="nav-button"><span class="menuIcon">I</span></button>
+          <div class="logoTagline">
+            <a href="index.html"><img src="images/logo.png" alt="Share Site Logo" class="logo" /></a>
+
+
+            <h1 id="tagLine" class="bold">Share your life!</h1>
+          </div>
+        </div>
+        <div class="supernav">
+          <div class="upperNav">
+            <!--UpperNav contains Logout, edit my profile, picture and searchbar-->
+
+            <ul class="pipes">
+              <!--piping is used here to add | between the li elements -->
+              <li><a href="allUsers.html" class="aHoverUnderline">Edit my profile</a></li>
+
+              <li><a href="allUsers.html" class="aHoverUnderline">Logout</a></li>
+            </ul>
+          </div>
+
+          <div class="lowerNav">
+            <!--lowerNav contains menu buttons such as Home, All Users-->
+            <ul>
+              <!--class "navButtonCurrentlyViewing" is used to make the lower border blue of the currently active menu button-->
+              <li><a href="index.html" class="navButton navButtonCurrentlyViewing"><span class="homeIcon"></span>Home</a></li>
+              <li><a href="myStatus.html" class="navButton"><span class="statusesIcon"></span>My Status</a></li>
+              <li><a href="allUsers.html" class="navButton"><span class="usersIcon"></span>All Users</a></li>
+              <li><a href="about.html" class="navButton"><i class="fa fa-file-text-o"></i>&nbspAbout</a></li>
+              <li><a href="map.html" class="navButton"><i class="fa fa-map"></i>&nbspMap!</a></li>
+              <li>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <div id="maincontainer">
+      <!--main container that contains every other body elements-->
+    <div class="padding">
+
+      <!--padding for main tag-->
+      <main>
+
+        <article>
+          <form method="post">
+            <button type="button" id="tweetButton"><i class="fa fa-paper-plane-o"></i>Post a Status</button>
+          </form>
+          <div class="blockFeed">
+            <!--div where the news feed is shown-->
+            <div class="post">
+              <!--div that contains the individual post-->
+              <div class="postHeader">
+                <img src="images/photo1.jpg" alt="User Image" />
+                <h2 class="bold"><a href="#" class="aHoverColorUnderline">David Eicher</a><span class="grey">&nbsp;@DavidEicher&nbsp;<span class="time">1h</span></span></h2>
+              </div>
+              <p>Just adding more text so that the text smoothly aligns itself when the image height is exceeded by the text. I hope this much text is sufficient to do that. What if you make the text look more longer. Even longer than this, lorem ipsum dadium, noficaloy Ya it works! So it seems the text is still not under the image so i'll just add more text to it, i hope it works this time!</p>
+
+              <div class="clearFloat"></div>
+              <ul class="postSocialButtons">
+                <!--Piping is used-->
+                <li><button aria-label="reply" type="button" class="replyIcon replyCSS" data-id="reply_1">Reply</button></li>
+              </ul>
+              <div class="replyCode">
+                <noscript>
+                  <div class="replyBox">
+                    <form  method="post">
+                      <textarea aria-label="yourreply" class="tweetBody" placeholder="Write your reply here"></textarea>
+                      <div class="flex">
+                        <button class="sendButton" type="submit">Reply</button>
+                      </div>
+                    </form>
+                  </div>
+                </noscript>
+              </div>
+            </div>
+
+
+            <div class="post">
+              <div class="postHeader">
+                <img src="images/photo3.jpg" alt="I" />
+                <h2 class="bold"><a href="#" class="aHoverColorUnderline">Sarah Kane</a><span class="grey">&nbsp;@SarahKane&nbsp;<span class="time">1h</span></span></h2>
+              </div>
+              <p>Found amazing resources about advance CSS techniques just by googling it. Loving it!</p>
+
+              <div class="clearFloat"></div>
+              <ul class="postSocialButtons">
+               <li><button aria-label="reply" type="button" class="replyIcon replyCSS" data-id="reply_2">Reply</button></li>
+
+              </ul>
+              <div class="replyCode">
+                <noscript>
+                  <div class="replyBox">
+                    <form  method="post">
+                      <textarea aria-label="yourreply" class="tweetBody" placeholder="Write your reply here"></textarea>
+                      <div class="flex">
+                        <button class="sendButton" type="submit">Reply</button>
+                      </div>
+                    </form>
+                  </div>
+                </noscript>
+              </div>
+            </div>
+
+
+            <div class="post">
+              <div class="postHeader">
+                <img src="images/photo2.jpg" alt="I" />
+                <h2 class="bold"><a href="#" class="aHoverColorUnderline">Chris Wayne</a><span class="grey">&nbsp;@ChrisWayne&nbsp;<span class="time">1h</span></span></h2>
+              </div>
+              <p>What if time is constant, and we are moving through time? Just like travelling in a car it the illusion feels like as if everything else is moving and you are stationary, what if in the same way, time was constant? Moving my head around these thoughts! Feeling like Aristotle! This gibberish is not to be taken as something funny.</p>
+
+              <div class="clearFloat"></div>
+              <ul class="postSocialButtons">
+               <li><button aria-label="reply" type="button" class="replyIcon replyCSS">Reply</button></li>
+
+              </ul>
+              <div class="replyCode">
+                <noscript>
+                  <div class="replyBox">
+                    <form  method="post">
+                      <textarea aria-label="yourreply" class="tweetBody" placeholder="Write your reply here"></textarea>
+                      <div class="flex">
+                        <button class="sendButton" type="submit">Reply</button>
+                      </div>
+                    </form>
+                  </div>
+                </noscript>
+              </div>
+            </div>
+
+
+            <div class="post">
+              <div class="postHeader">
+               <img src="images/photo1.jpg" alt="Imp" />
+                <h2 class="bold"><a href="about.html" class="aHoverColorUnderline">Jane K.</a><span class="grey">&nbsp;@DavidEicher&nbsp;<span class="time">1h</span></span></h2>
+              </div>
+              <p>Watched an amazing movie! You guys should also check out too! So this movie revolves around batman vs superman. Even longer than this, lorem ipsum dadium, noficaloy Ya it works! constant, and we are moving zing resources about advance smoothly aligns itself when nd these thoughts! Feeling like Aris niques just by googling!</p>
+
+              <ul class="postSocialButtons">
+               <li><button aria-label="reply" type="button" class="replyIcon replyCSS">Reply</button></li>
+
+              </ul>
+              <div class="replyCode">
+                <noscript>
+                  <div class="replyBox">
+                    <form  method="post">
+                      <textarea aria-label="yourreply" class="tweetBody" placeholder="Write your reply here"></textarea>
+                      <div class="flex">
+                        <button class="sendButton" type="submit">Reply</button>
+                      </div>
+                    </form>
+                  </div>
+                </noscript>
+              </div>
+            </div>
+
+
+            <div class="post">
+              <div class="postHeader">
+                <img src="images/photo3.jpg" alt="I" />
+                <h2 class="bold"><a href="#" class="aHoverColorUnderline">Sarah Kane</a><span class="grey">&nbsp;@SarahKane&nbsp;<span class="time">1h</span></span></h2>
+              </div>
+              <p>Found amazing resources about advance CSS techniques just by googling it. Loving it!</p>
+
+              <div class="clearFloat"></div>
+              <ul class="postSocialButtons">
+               <li><button aria-label="reply" type="button" class="replyIcon replyCSS">Reply</button></li>
+
+              </ul>
+              <div class="replyCode">
+                <noscript>
+                  <div class="replyBox">
+                    <form  method="post">
+                      <textarea aria-label="yourreply" class="tweetBody" placeholder="Write your reply here"></textarea>
+                      <div class="flex">
+                        <button class="sendButton" type="submit">Reply</button>
+                      </div>
+                    </form>
+                  </div>
+                </noscript>
+              </div>
+            </div>
+
+
+            <div class="post">
+              <div class="postHeader">
+                <img src="images/photo2.jpg" alt="I" />
+                <h2 class="bold"><a href="#" class="aHoverColorUnderline">Chris Wayne</a><span class="grey">&nbsp;@ChrisWayne&nbsp;<span class="time">1h</span></span></h2>
+              </div>
+              <p>What if time is constant, and we are moving through time? Just like travelling in a car it the illusion feels like as if everything else is moving and you are stationary, what if in the same way, time was constant? Moving my head around these thoughts! Feeling like Aristotle! This gibberish is not to be taken as something funny.</p>
+
+              <div class="clearFloat"></div>
+              <ul class="postSocialButtons">
+               <li><button aria-label="reply" type="button" class="replyIcon replyCSS">Reply</button></li>
+
+              </ul>
+              <div class="replyCode">
+                <noscript>
+                  <div class="replyBox">
+                    <form  method="post">
+                      <textarea aria-label="yourreply" class="tweetBody" placeholder="Write your reply here"></textarea>
+                      <div class="flex">
+                        <button class="sendButton" type="submit">Reply</button>
+                      </div>
+                    </form>
+                  </div>
+                </noscript>
+              </div>
+            </div>
+
+
+            <div class="post">
+              <div class="postHeader">
+                <img src="images/photo1.jpg" alt="Imp" />
+                <h2 class="bold"><a href="about.html" class="aHoverColorUnderline">Jane K.</a><span class="grey">&nbsp;@DavidEicher&nbsp;<span class="time">1h</span></span></h2>
+              </div>
+              <p>Watched an amazing movie! You guys should also check out too! So this movie revolves around batman vs superman. Even longer than this, lorem ipsum dadium, noficaloy Ya it works! constant, and we are moving zing resources about advance smoothly aligns itself when nd these thoughts! Feeling like Aris niques just by googling!</p>
+
+              <ul class="postSocialButtons">
+              <li><button aria-label="reply" type="button" class="replyIcon replyCSS">Reply</button></li>
+
+              </ul>
+             <div class="replyCode">
+                <noscript>
+                  <div class="replyBox">
+                    <form  method="post">
+                      <textarea aria-label="yourreply" class="tweetBody" placeholder="Write your reply here"></textarea>
+                      <div class="flex">
+                        <button class="sendButton" type="submit">Reply</button>
+                      </div>
+                    </form>
+                  </div>
+                </noscript>
+              </div>
+            </div>
+
+
+            <div class="post">
+              <div class="postHeader">
+                <img src="images/photo3.jpg" alt="I" />
+                <h2 class="bold"><a href="#" class="aHoverColorUnderline">Sarah Kane</a><span class="grey">&nbsp;@SarahKane&nbsp;<span class="time">1h</span></span></h2>
+              </div>
+              <p>Found amazing resources about advance CSS techniques just by googling it. Loving it!</p>
+
+              <div class="clearFloat"></div>
+              <ul class="postSocialButtons">
+               <li><button aria-label="reply" type="button" class="replyIcon replyCSS">Reply</button></li>
+
+              </ul>
+              <div class="replyCode">
+                <noscript>
+                  <div class="replyBox">
+                    <form  method="post">
+                      <textarea aria-label="yourreply" class="tweetBody" placeholder="Write your reply here"></textarea>
+                      <div class="flex">
+                        <button class="sendButton" type="submit">Reply</button>
+                      </div>
+                    </form>
+                  </div>
+                </noscript>
+              </div>
+            </div>
+
+
+            <div class="post">
+              <div class="postHeader">
+                <img src="images/photo2.jpg" alt="I" />
+                <h2 class="bold"><a href="#" class="aHoverColorUnderline">Chris Wayne</a><span class="grey">&nbsp;@ChrisWayne&nbsp;<span class="time">1h</span></span></h2>
+              </div>
+              <p>What if time is constant, and we are moving through time? Just like travelling in a car it the illusion feels like as if everything else is moving and you are stationary, what if in the same way, time was constant? Moving my head around these thoughts! Feeling like Aristotle! This gibberish is not to be taken as something funny.</p>
+
+              <div class="clearFloat"></div>
+              <ul class="postSocialButtons">
+               <li><button aria-label="reply" type="button" class="replyIcon replyCSS">Reply</button></li>
+
+              </ul>
+              <div class="replyCode">
+                <noscript>
+                  <div class="replyBox">
+                    <form  method="post">
+                      <textarea aria-label="yourreply" class="tweetBody" placeholder="Write your reply here"></textarea>
+                      <div class="flex">
+                        <button class="sendButton" type="submit">Reply</button>
+                      </div>
+                    </form>
+                  </div>
+                </noscript>
+              </div>
+            </div>
+
+
+            <div class="post">
+              <div class="postHeader">
+                <img src="images/photo1.jpg" alt="Imp" />
+                <h2 class="bold"><a href="about.html" class="aHoverColorUnderline">Jane K.</a><span class="grey">&nbsp;@DavidEicher&nbsp;<span class="time">1h</span></span></h2>
+              </div>
+              <p>Watched an amazing movie! You guys should also check out too! So this movie revolves around batman vs superman. Even longer than this, lorem ipsum dadium, noficaloy Ya it works! constant, and we are moving zing resources about advance smoothly aligns itself when nd these thoughts! Feeling like Aris niques just by googling!</p>
+
+              <ul class="postSocialButtons">
+               <li><button aria-label="reply" type="button" class="replyIcon replyCSS">Reply</button></li>
+
+              </ul>
+              <div class="replyCode">
+                <noscript>
+                  <div class="replyBox">
+                    <form  method="post">
+                      <textarea aria-label="yourreply" class="tweetBody" placeholder="Write your reply here"></textarea>
+                      <div class="flex">
+                        <button class="sendButton" type="submit">Reply</button>
+                      </div>
+                    </form>
+                  </div>
+                </noscript>
+              </div>
+            </div>
+
+            <div id="moreHere" aria-live="polite"></div>
+
+          </div>
+
+
+            <button aria-label="see more statuses" type="button" id="loadMore">See more statuses!</button>
+
+        </article>
+
+
+        <aside>
+          <div id="weatherInfo">
+            <p>It's <span id="weather">an unknown weather</span> today!</p>
+            <button type="button" class="followButton" id="weatherButton"><i class="fa fa-sun-o"></i>&nbspUpdate the weather</button>
+          </div>
+          <div class="asideGeneralBlock asideUsers">
+            <!--Aside Block-->
+
+            <div class="notableUsersHeading">
+              <!--Heading for first block of aside-->
+              <p class="grey">Who to follow</p>
+              <!--Grey class is for grey text color-->
+              <ul>
+                <li><a href="#" class="aHoverUnderline">Refresh</a></li>
+                <li>&nbsp;-&nbsp;</li>
+                <li><a href="#" class="aHoverUnderline">View all</a></li>
+              </ul>
+            </div>
+            <div class="notableUsersList">
+              <!--Lists related users that the user could knw -->
+             <img src="images/photo1.jpg" alt="User Image" />
+
+              <h2 class="bold"><a href="#" class="aHoverColorUnderline">David Eicher</a><span class="grey">&nbsp;@DavidEicher&nbsp;</span></h2>
+
+              <p>Studies at Holberton School</p>
+
+              <button class="followButton"><span class="followIcon">&nbsp;</span>Follow</button>
+
+
+            </div>
+
+            <div class="notableUsersList">
+              <img src="images/photo2.jpg" alt="User Image" />
+
+              <h2 class="bold"><a href="#" class="aHoverColorUnderline">Chris Wayne</a><span class="grey">&nbsp;@ChrisWayne&nbsp;</span></h2>
+
+              <p>Fitness is cool</p>
+
+              <button class="followButton"><span class="followIcon">&nbsp;</span>Follow</button>
+
+
+            </div>
+
+            <div class="notableUsersList">
+             <img src="images/photo3.jpg" alt="User Image" />
+
+              <h2 class="bold"><a href="#" class="aHoverColorUnderline">Sarah Kane</a><span  class="grey">&nbsp;@SarahKane&nbsp;</span></h2>
+
+              <p>I am impossible</p>
+
+              <button class="followButton"><span class="followIcon">&nbsp;</span>Follow</button>
+
+
+            </div>
+            <p><a href="#" class="aHoverUnderline">Find Friends</a></p>
+
+          </div>
+
+          <div class="asideGeneralBlock asideLinks">
+            <!--Sitemap-->
+            <ul>
+              <li>&#169;&nbsp;HaShare</li>
+              <li>Impossible Octopus Fitness</li>
+              <li>Help</li>
+              <li>Terms</li>
+            </ul>
+          </div>
+
+          <div class="beta">
+            <!--always stays at bottom right corner -->
+            <p>This website is in beta</p>
+          </div>
+        </aside>
+      </main>
+    </div>
+    <footer>
+         <div class="footerLinks">
+          <ul>
+              <li class="grey2 bold">SITEMAP</li>
+              <li><a href="#" class="aHoverUnderline">Help</a></li>
+              <li><a href="#" class="aHoverUnderline">Terms</a></li>
+              <li><a href="#" class="aHoverUnderline">Privacy</a></li>
+              <li><a href="#" class="aHoverUnderline">Advertise</a></li>
+            </ul>
+
+            </div>
+            <p>Site built by <em>Mason Fish</em> and <em>Bilal Khan</em></p>
+
+        </footer>
+  </div>
+</body>
+
+</html>

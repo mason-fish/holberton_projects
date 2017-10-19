@@ -1,0 +1,2 @@
+#!/bin/bash
+cat /etc/passwd | cut -d':' -f3 | cut -d'0' -s -f1 | wc -l

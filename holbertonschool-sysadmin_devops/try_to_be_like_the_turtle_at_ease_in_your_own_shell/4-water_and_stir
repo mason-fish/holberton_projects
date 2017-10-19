@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "obase=8;ibase=5;$(tr 'water' '01234' <<< $WATER) + $(tr 'stir.' '01234' <<< $STIR)" | bc | tr '01234567' 'behlnort'

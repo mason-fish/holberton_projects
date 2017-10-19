@@ -1,0 +1,19 @@
+What should you create? Using what?
+     To gain secure access to a server with SSH key-based authentication, you must
+     first generate a public & private key pair. This can be done using the ssh-keygen
+     utility (included with OpenSSH suite, which you will need to install if it is not
+     already on your machine).
+
+What should you do with the public key? How will it be used? What will it do?
+     The newly generated public key should be added to the desired server's authorized_keys
+     directory. This key will be used to authenticate your client machine. This authentication
+     begins by the client (e.g. your remote machine) initiating an SSH connection to the server,
+     the server will respond by sending a random challenge message, the client will then encrypt
+     this message using a private key and send it back to the server, finally the server will
+     decrypt this using the public key (which is the pair of the private that was used to encrypt
+     the message). If the message matches then the client is authenticated.
+
+What should you do with the private key? How will it be used? What will it do?
+     Private keys should always be kept as private as possible (do not share or copy it at all).
+     They are used to encrypt data which can only be decrypted by their matching public keys. They
+     are used for the authentication protocol described above.

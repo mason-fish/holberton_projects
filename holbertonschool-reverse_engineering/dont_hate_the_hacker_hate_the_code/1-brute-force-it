@@ -1,0 +1,20 @@
+#!/bin/bash
+
+ANSWER=""
+
+strings a.out > DICTIONARY
+
+while read STRING
+do
+    if [ ! -f x ]; then
+	cp a.out x
+	./x "$STRING"
+	ANSWER="$STRING"
+    else
+	echo "The password is: $ANSWER"
+	break
+    fi
+done < DICTIONARY
+
+rm -f DICTIONARY
+rm -f x

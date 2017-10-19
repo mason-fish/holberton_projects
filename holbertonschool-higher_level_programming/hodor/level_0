@@ -1,0 +1,10 @@
+#!/usr/bin/python
+
+import thread
+import requests
+
+for i in range(1024):
+    r = requests.post("http://173.246.108.142/level0.php", data={'id': '41', 'type': 'text', 'holdthedoor': 'submit'})
+    print (i, r.status_code, r.reason)
+
+print "done!"

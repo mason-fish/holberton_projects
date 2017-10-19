@@ -1,0 +1,5 @@
+#!/bin/bash
+S=$(printf %*s $[$(tput cols)/3])
+for((i=0;i<$(tput lines);i++));do
+echo -e "\e[42m$S\e[47m$S\e[41m$S\e[0m"
+done

@@ -1,0 +1,8 @@
+.main {
+    background-color: rgba(6, 175, 255, 0.1);
+    width: 100%;
+    left: 300px;
+    top: 60px;
+    bottom: 40px;
+    position: absolute;
+}
